@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css?family=Allerta);
+/* Created by M. N. Hidayat.
+ * Please, was has permission when will edited this file.
+ * Thanks! for your attention.
+ * Greetings. BRAVOOO */
+/* line 64, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6, p, span, i, div, a, button {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* line 68, ../sass/screen.scss */
+.main-nav-top {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.25);
+}
+/* line 74, ../sass/screen.scss */
+.main-nav-top .brand-link > li > a {
+  color: white;
+  pointer-events: none;
+  font-family: "Allerta", sans-serif;
+}
+/* line 36, ../sass/screen.scss */
+.main-nav-top .brand-link > li > a:hover, .main-nav-top .brand-link > li > a:focus, .main-nav-top .brand-link > li > a:active {
+  text-decoration: none;
+  color: white;
+  background-color: none;
+}
+/* line 85, ../sass/screen.scss */
+.main-nav-top .navbar-right > li > a {
+  color: white;
+  font-weight: bold;
+}
+/* line 36, ../sass/screen.scss */
+.main-nav-top .navbar-right > li > a:hover, .main-nav-top .navbar-right > li > a:focus, .main-nav-top .navbar-right > li > a:active {
+  text-decoration: none;
+  color: white;
+  background-color: none;
+}
+/* line 93, ../sass/screen.scss */
+.main-nav-top .container {
+  position: relative;
+}
+/* line 96, ../sass/screen.scss */
+.main-nav-top .container > a {
+  position: absolute;
+  width: 160px;
+  top: 101%;
+}
+/* line 101, ../sass/screen.scss */
+.main-nav-top .container > a > img {
+  width: 100%;
+}
+
+/* line 108, ../sass/screen.scss */
+.intro {
+  position: relative;
+}
+/* line 111, ../sass/screen.scss */
+.intro > img {
+  width: 100%;
+}
+/* line 115, ../sass/screen.scss */
+.intro .intro-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* line 119, ../sass/screen.scss */
+.intro .intro-info > h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+/* line 125, ../sass/screen.scss */
+.intro .intro-info > h4 {
+  color: white;
+  font-size: 23px;
+  margin-top: 20px;
+}
+/* line 131, ../sass/screen.scss */
+.intro .intro-info > a {
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #fcc71d;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border: 0px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+}
+/* line 36, ../sass/screen.scss */
+.intro .intro-info > a:hover, .intro .intro-info > a:focus, .intro .intro-info > a:active {
+  text-decoration: none;
+  color: white;
+  background-color: #fdd34f;
+}
+
+/* line 140, ../sass/screen.scss */
+.availbility-schedule {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  width: 60%;
+  border-bottom: 1px solid #ececec;
+}
+/* line 146, ../sass/screen.scss */
+.availbility-schedule > .form-inline {
+  text-align: center;
+}
+/* line 149, ../sass/screen.scss */
+.availbility-schedule > .form-inline input {
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+/* line 156, ../sass/screen.scss */
+.availbility-schedule > .form-inline > button {
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #fcc71d;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border: 0px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+}
+/* line 36, ../sass/screen.scss */
+.availbility-schedule > .form-inline > button:hover, .availbility-schedule > .form-inline > button:focus, .availbility-schedule > .form-inline > button:active {
+  text-decoration: none;
+  color: white;
+  background-color: #fdd34f;
+}
+
+/* line 165, ../sass/screen.scss */
+.welcoming {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 60%;
+}
+/* line 171, ../sass/screen.scss */
+.welcoming > h1 {
+  line-height: 1.3;
+  font-size: 32px;
+}
+/* line 176, ../sass/screen.scss */
+.welcoming > p {
+  margin-top: 40px;
+  color: #7d7d7d;
+  font-size: 14px;
+}
+/* line 182, ../sass/screen.scss */
+.welcoming > a {
+  margin-top: 20px;
+  font-size: 15px;
+  background-color: #fcc71d;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border: 0px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+}
+/* line 36, ../sass/screen.scss */
+.welcoming > a:hover, .welcoming > a:focus, .welcoming > a:active {
+  text-decoration: none;
+  color: white;
+  background-color: #fdd34f;
+}
