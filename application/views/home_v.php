@@ -73,7 +73,7 @@
 	<!-- welcoming -->
 	<section class="container welcoming">
 		<h1>WELCOME TO<br>TENDEAN RESIDENCE</h1>
-		<p>Do Jakarta differently, at Tendean Residence. Have the independence of your own home with all our services and benefit from our unrivalled position in the hearth of Jakarta.</p>
+		<p>Do Jakarta differently, at Tendean Residence. Have the independence of your own home with all our services and benefit from our unrivalled position in the heart of Jakarta.</p>
 		<a href="#" class="btn btn-default">MORE DETAIL</a>
 	</section>
 
