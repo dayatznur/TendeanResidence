@@ -165,21 +165,20 @@ h1, h2, h3, h4, h5, h6, p, span, i, div, a, button {
 .welcoming {
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 40px;
   width: 60%;
 }
-/* line 239, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 .welcoming > h1 {
   line-height: 1.3;
   font-size: 32px;
 }
-/* line 244, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .welcoming > p {
   margin-top: 40px;
   color: #7d7d7d;
   font-size: 14px;
 }
-/* line 250, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .welcoming > a {
   margin-top: 20px;
   font-size: 15px;
@@ -199,8 +198,9 @@ h1, h2, h3, h4, h5, h6, p, span, i, div, a, button {
   background-color: #fdd34f;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 .gallery {
+  padding-top: 40px;
   padding-bottom: 50px;
 }
 /* line 261, ../sass/screen.scss */

@@ -233,7 +233,6 @@ h1, h2, h3, h4, h5, h6, p, span, i, div, a, button{
 .welcoming{
 	text-align: center;
 	padding-top: 40px;
-	padding-bottom: 40px;
 	width: 60%;
 
 	>h1{
@@ -256,6 +255,7 @@ h1, h2, h3, h4, h5, h6, p, span, i, div, a, button{
 }
 
 .gallery{
+	padding-top: 40px;
 	padding-bottom: 50px;
 
 	>.row{
