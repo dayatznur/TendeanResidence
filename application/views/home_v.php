@@ -81,42 +81,42 @@
 	<section class="container gallery">
 		<div class="row">
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery1.jpg" class="gallery-popup">
 					<img src="assets/img/gallery1.jpg">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery2.jpg" class="gallery-popup">
 					<img src="assets/img/gallery2.jpg">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery3.jpg" class="gallery-popup">
 					<img src="assets/img/gallery3.jpg">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery4.jpg" class="gallery-popup">
 					<img src="assets/img/gallery4.jpg">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery5.jpg" class="gallery-popup">
 					<img src="assets/img/gallery5.jpg">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery6.jpg" class="gallery-popup">
 					<img src="assets/img/gallery6.jpg">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery7.jpg" class="gallery-popup">
 					<img src="assets/img/gallery7.jpg">
 				</a>
 			</div>
 			<div class="col-md-3 col-sm-3">
-				<a href="#">
+				<a href="assets/img/gallery8.jpg" class="gallery-popup">
 					<img src="assets/img/gallery8.jpg">
 				</a>
 			</div>
@@ -208,7 +208,34 @@
 
 	<script type="text/javascript">
 		$(function() {
+
+			// datepicker
 		    $('input[name="daterange"]').daterangepicker();
+
+		    // Initialize popup as usual
+			$('.gallery-popup').magnificPopup({
+				  type: 'image',
+				  mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+				  gallery: {
+						enabled: true
+					},
+				  zoom: {
+				    enabled: true, // By default it's false, so don't forget to enable it
+
+				    duration: 300, // duration of the effect, in milliseconds
+				    easing: 'ease-in-out', // CSS transition easing function
+
+				    // The "opener" function should return the element from which popup will be zoomed in
+				    // and to which popup will be scaled down
+				    // By defailt it looks for an image tag:
+				    opener: function(openerElement) {
+				      // openerElement is the element on which popup was initialized, in this case its <a> tag
+				      // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+				      return openerElement.is('img') ? openerElement : openerElement.find('img');
+				    }
+				  }
+
+			});
 		});
 	</script>
 

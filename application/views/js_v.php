@@ -13,3 +13,6 @@
 
 <!-- master -->
 <script type="text/javascript" src="assets/js/master.js"></script>
+
+<!-- magnific popup, source for : http://dimsemenov.com/plugins/magnific-popup/documentation.html -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
