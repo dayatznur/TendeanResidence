@@ -32,11 +32,11 @@
 	        <li><a href="#">TENDEAN RESIDENCE-Jl.Kapten Tendean(Wolter Monginsidi) 127,Jakarta Selatan-12180</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">HOME</a></li>
-	        <li><a href="#">ABOUT US</a></li>
-	        <li><a href="#">GALLERY</a></li>
-	        <li><a href="#">FACILITY</a></li>
-	        <li><a href="#">CONTACT US</a></li>
+	        <li><a href="#home" rel="nav-anchor">HOME</a></li>
+	        <li><a href="#about-us" rel="nav-anchor">ABOUT US</a></li>
+	        <li><a href="#gallery" rel="nav-anchor">GALLERY</a></li>
+	        <li><a href="#facility" rel="nav-anchor">FACILITY</a></li>
+	        <li><a href="#contact-us" rel="nav-anchor">CONTACT US</a></li>
 	      </ul>
 	    </div>
 
@@ -48,7 +48,7 @@
 	</nav>
 
 	<!-- intro -->
-	<section class="intro">
+	<section class="intro" id="home">
 		<img src="assets/img/rilex-room.jpg" alt="intro-background">
 		<div class="intro-info">
 			<h1>TENDEAN RESIDENCE</h1>
@@ -71,14 +71,14 @@
 	</section>
 
 	<!-- welcoming -->
-	<section class="container welcoming">
+	<section class="container welcoming" id="about-us">
 		<h1>WELCOME TO<br>TENDEAN RESIDENCE</h1>
 		<p>Do Jakarta differently, at Tendean Residence. Have the independence of your own home with all our services and benefit from our unrivalled position in the heart of Jakarta.</p>
 		<a href="#" class="btn btn-default">MORE DETAIL</a>
 	</section>
 
 	<!-- gallery -->
-	<section class="container gallery">
+	<section class="container gallery" id="gallery">
 		<div class="row">
 			<div class="col-md-3 col-sm-3">
 				<a href="assets/img/gallery1.jpg" class="gallery-popup">
@@ -142,7 +142,7 @@
 	</section>
 
 	<!-- experience -->
-	<section class="container experience">
+	<section class="container experience" id="facility">
 		<div class="heading">
 			<h4>HOTEL EXPERIENCE</h4>
 			<h3>FACILITY HOTEL</h3>
@@ -188,7 +188,7 @@
 	</section>
 
 	<!-- footer -->
-	<footer>
+	<footer id="contact-us">
 		<div class="maps">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1904588986117!2d106.81490194995148!3d-6.23860999546196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f160100096ab%3A0x6dbb5082311d9026!2sTENDEAN+RESIDENCES!5e0!3m2!1sen!2sid!4v1487898437245" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
@@ -236,6 +236,15 @@
 				  }
 
 			});
+
+			// nav scroll smoooth
+			$('a[rel="nav-anchor"]').click(function(){
+			    $('html, body').animate({
+			        scrollTop: $( $.attr(this, 'href') ).offset().top + (-50)
+			    }, 500);
+			    return false;
+			});
+
 		});
 	</script>
 
