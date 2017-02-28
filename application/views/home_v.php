@@ -231,7 +231,7 @@
 				    <label for="message">Message</label>
 				  	<textarea class="form-control" rows="3" id="message" name="message"></textarea>
 				  </div>
-				  <button type="submit" class="btn btn-default">Submit</button>
+				  <button type="submit" class="btn btn-default" name="send_contact_us">Submit</button>
 				</form>
 	      </div>
 	    </div>
@@ -314,9 +314,269 @@
 		        }
             });
 
-
 		});
 	</script>
 
 </body>
 </html>
+
+<?php
+
+if(isset($_POST['send_contact_us'])){
+
+    require 'PHPMailer/PHPMailerAutoload.php';
+
+    try{
+        // throw new Exception();
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $comment=$_POST['comment'];
+        $message=$_POST['message'];
+
+    }catch (Exception $e){
+
+        echo 'Caught exception: ',  $e->getMessage(), "\n";
+
+        $dateLog = date("Y-m-d H:i:s");   
+        $log = "\n".$_POST['name']."|".$_POST['email']."|".$_POST['comment']."|".$_POST['message']."|".$dateLog."";
+        $fh = fopen("logRegister.txt", "a");
+        fwrite($fh, $log);
+        fclose($fh);
+
+        $mail = new PHPMailer;
+
+        //Enable SMTP debugging. 
+        $mail->SMTPDebug = 0;                               
+        //Set PHPMailer to use SMTP.
+        $mail->isSMTP();            
+        //Set SMTP host name                          
+        $mail->Host = "mail.bvl.com.sggg";
+        //Set this to true if SMTP host requires authentication to send email
+        $mail->SMTPAuth = true;                          
+        //Provide username and password     
+        $mail->Username = "mail@bvl.com.sggg";
+        $mail->Password = "Test1234@";
+        //If SMTP requires TLS encryption then set it
+        $mail->SMTPSecure = "ssl";                           
+        //Set TCP port to connect to 
+        $mail->Port = 465;                                   
+
+        $mail->From = "mail@bvl.com.sgggg";
+        $mail->FromName = "BVL";
+
+        $mail->addAddress("tang@trillium-tech.commmm");
+        // $mail->addAddress("dayat@corporatecultureonline.com");
+      
+        $mail->addReplyTo($_POST['email'], "Reply");
+        
+        $mail->addCC("contact.andriana@gmail.commmm");
+        // $mail->addCC("dayatznur@gmail.com");
+
+        $mail->isHTML(true);
+
+        $mail->Subject = "CONTACT US";
+
+        $mail->Body =
+            "<table>
+                <tr>
+                    <td colspan='2'>
+                        <span style='color:blue'>There is a registration failure. Please contact the support team.</span>
+                        <br />
+                        <span style='color:red'>Customer data captured as follows:</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Name:</strong></td>
+                    <td>: ".$_POST['name']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>: ".$_POST['email']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Phone:</strong></td>
+                    <td>: ".$_POST['comment']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Message:</strong></td>
+                    <td>: ".$_POST['message']."</td>
+                </tr>
+            </table>";
+
+        if(!$mail->send()) 
+        {
+            //echo "Mailer Error: " . $mail->ErrorInfo;
+            $msgError = "Error sending email!";
+            $dateLog = date("Y-m-d H:i:s");   
+            $log ="\n".$msgError."|".$_POST['email']."|".$dateLog."";
+            $fh = fopen("logRegister.txt", "a");
+            fwrite($fh, $log);
+            fclose($fh);
+        }
+        else 
+        {
+            $msgTrue = "Mail sent OK";
+        }
+    }
+
+
+    try{
+        
+        $mail = new PHPMailer;
+
+        //Enable SMTP debugging. 
+        $mail->SMTPDebug = 0;                               
+        //Set PHPMailer to use SMTP.
+        $mail->isSMTP();            
+        //Set SMTP host name                          
+        // $mail->Host = "s4-singapore.accountservergroup.com";
+        $mail->Host = "mail.bvl.com.sggg";
+        //Set this to true if SMTP host requires authentication to send email
+        $mail->SMTPAuth = true;                          
+        //Provide username and password     
+        $mail->Username = "mail@bvl.com.sggg";
+        $mail->Password = "Test1234@";
+        //If SMTP requires TLS encryption then set it
+        $mail->SMTPSecure = "ssl";                           
+        //Set TCP port to connect to 
+        $mail->Port = 465;                                   
+
+        $mail->From = "mail@bvl.com.sggg";
+        $mail->FromName = "BVL";
+
+        $mail->addAddress("tang@trillium-tech.commm");
+        // $mail->addAddress("dayat@corporatecultureonline.com");
+      
+        $mail->addReplyTo($_POST['email'], "Reply");
+        
+        $mail->addCC("contact.andriana@gmail.commm");
+        // $mail->addCC("dayatznur@gmail.com");
+
+        $mail->isHTML(true);
+
+        $mail->Subject = "CONTACT US";
+
+        $mail->Body =
+            "<table>
+                <tr>
+                    <td><strong>Name:</strong></td>
+                   <td>: ".$_POST['name']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>: ".$_POST['email']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Phone:</strong></td>
+                    <td>: ".$_POST['comment']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Message:</strong></td>
+                    <td>: ".$_POST['message']."</td>
+                </tr>
+            </table>";
+
+        if(!$mail->send()) 
+        {
+            //echo "Mailer Error: " . $mail->ErrorInfo;
+            $msgError = "Error sending email!";
+            $dateLog = date("Y-m-d H:i:s");   
+            $log ="\n".$msgError."|".$_POST['email']."|".$dateLog."";
+            $fh = fopen("logRegister.txt", "a");
+            fwrite($fh, $log);
+            fclose($fh);
+        }
+        else 
+        {
+            $msgTrue = "Mail sent OK";
+        }
+
+    }catch(Exception $e){
+        echo 'Caught exception: ',  $e->getMessage(), "\n";
+
+        $dateLog = date("Y-m-d H:i:s");   
+        $log = "\n".$_POST['name']."|".$_POST['email']."|".$_POST['comment']."|".$_POST['message']."|".$dateLog."";
+        $fh = fopen("logRegister.txt", "a");
+        fwrite($fh, $log);
+        fclose($fh);
+
+        $mail = new PHPMailer;
+
+        //Enable SMTP debugging. 
+        $mail->SMTPDebug = 0;                               
+        //Set PHPMailer to use SMTP.
+        $mail->isSMTP();            
+        //Set SMTP host name                          
+        // $mail->Host = "s4-singapore.accountservergroup.com";
+        $mail->Host = "mail.bvl.com.sggg";
+        //Set this to true if SMTP host requires authentication to send email
+        $mail->SMTPAuth = true;                          
+        //Provide username and password     
+        $mail->Username = "mail@bvl.com.sggg";
+        $mail->Password = "Test1234@";
+        //If SMTP requires TLS encryption then set it
+        $mail->SMTPSecure = "ssl";                           
+        //Set TCP port to connect to 
+        $mail->Port = 465;                                   
+
+        $mail->From = "mail@bvl.com.sggg";
+        $mail->FromName = "BVL";
+
+        $mail->addAddress("tang@trillium-tech.commm");
+        // $mail->addAddress("dayat@corporatecultureonline.com");
+      
+        $mail->addReplyTo($_POST['email'], "Reply");
+        
+        $mail->addCC("contact.andriana@gmail.commm");
+        // $mail->addCC("dayatznur@gmail.com");
+
+        $mail->isHTML(true);
+
+        $mail->Subject = "CONTACT US";
+
+        $mail->Body =
+            "<table>
+                <tr>
+                    <td colspan='2'>
+                        <span style='color:red'>There is a registration failure. Please contact the support team.</span>
+                        <br />
+                        <span style='color:red'>Customer data captured as follows:</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Name:</strong></td>
+                    <td>: ".$_POST['name']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>: ".$_POST['email']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Phone:</strong></td>
+                    <td>: ".$_POST['comment']."</td>
+                </tr>
+                <tr>
+                    <td><strong>Message:</strong></td>
+                    <td>: ".$_POST['message']."</td>
+                </tr>
+            </table>";
+
+        if(!$mail->send()) 
+        {
+            //echo "Mailer Error: " . $mail->ErrorInfo;
+            $msgError = "Error sending email!";
+            $dateLog = date("Y-m-d H:i:s");   
+            $log ="\n".$msgError."|".$_POST['email']."|".$dateLog."";
+            $fh = fopen("logRegister.txt", "a");
+            fwrite($fh, $log);
+            fclose($fh);
+        }
+        else 
+        {
+            $msgTrue = "Mail sent OK";
+        }
+    }
+	
+}
+
+?>
