@@ -152,19 +152,19 @@
 			<div class="col-md-4 col-sm-4">
 				<div>
 					<img src="assets/img/gallery6.jpg">
-					<a href="#" class="btn btn-default">VIEW DETAILS</a>
+					<a href="#" class="btn btn-default">Complete Gymnastic Full Air Con</a>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div>
 					<img src="assets/img/gallery7.jpg">
-					<a href="#" class="btn btn-default">VIEW DETAILS</a>
+					<a href="#" class="btn btn-default">Internal Parking Lot</a>
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div>
 					<img src="assets/img/gallery8.jpg">
-					<a href="#" class="btn btn-default">VIEW DETAILS</a>
+					<a href="#" class="btn btn-default">Kitchen Set on Every Floor</a>
 				</div>
 			</div>
 		</div>
@@ -194,6 +194,7 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1904588986117!2d106.81490194995148!3d-6.23860999546196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f160100096ab%3A0x6dbb5082311d9026!2sTENDEAN+RESIDENCES!5e0!3m2!1sen!2sid!4v1487898437245" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 		<div class="container">
+			<button class="btn btn-default" data-toggle="modal" data-target="#contact-us-modal">Contact Us</button>
 			<h4>&copy 2014 TENDEAN RESIDENCE. ALL RIGHTS RESERVED.</h4>
 			<ul class="social-media">
 				<li><a href="#"><img src="assets/img/facebook-logo.png"></a></li>
@@ -203,6 +204,41 @@
 			</ul>
 		</div>
 	</footer>
+
+	<!-- contact us modal -->
+	<div class="modal fade contact-us-modal" tabindex="-1" role="dialog" id="contact-us-modal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">CONTACT US</h4>
+	      </div>
+	      <div class="modal-body">
+	        	<form>
+				  <div class="form-group">
+				    <label for="name">Name</label>
+				    <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+				  </div>
+				  <div class="form-group">
+				    <label for="email">Email address</label>
+				    <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+				  </div>
+				  <div class="form-group">
+				    <label for="comment">Comment</label>
+				  	<textarea class="form-control" rows="3" id="comment" name="comment"></textarea>
+				  </div>
+				  <div class="form-group">
+				    <label for="message">Message</label>
+				  	<textarea class="form-control" rows="3" id="message" name="message"></textarea>
+				  </div>
+				</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary">Submit</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 	<!-- js assets -->
 	<?php $this->load->view('js_v'); ?>

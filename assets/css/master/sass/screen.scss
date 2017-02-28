@@ -40,6 +40,7 @@ $experience-head: 16px;
 $experience-subhead: 23px;
 $experience-a: 14px;
 
+$footer-button: 15px;
 $footer-p: 16px;
 
 $background-gray: #eeeeee;
@@ -373,6 +374,7 @@ h1, h2, h3, h4, h5, h6, p, span, i, div, a, button{
 					font-size: $experience-a;
 					@include yellow-button(10px, 30px);
 					@include devil_hover($white, $button-yellow-darken);
+					pointer-events: none;
 				}
 			}
 		}
@@ -455,9 +457,16 @@ footer{
 		padding-top: 30px;
 		padding-bottom: 30px; 
 
+		>button{
+			@include yellow-button(10px, 30px);
+			@include devil_hover($white, $button-yellow-darken);
+			font-size: $footer-button;
+		}
+
 		h4{
 			color: $gray-welcoming-description;
 			font-size: $footer-p;
+			margin-top: 20px;
 		}
 
 		>.social-media{
@@ -474,6 +483,16 @@ footer{
 					}
 				}
 			}
+		}
+	}
+}
+
+.contact-us-modal{
+	.modal-footer{
+		>button{
+			@include yellow-button(10px, 30px);
+			@include devil_hover($white, $button-yellow-darken);
+			font-size: $footer-button;
 		}
 	}
 }
