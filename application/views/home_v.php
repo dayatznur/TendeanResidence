@@ -214,7 +214,7 @@
 	        <h4 class="modal-title">CONTACT US</h4>
 	      </div>
 	      <div class="modal-body">
-	        	<form>
+	        	<form action="#" method="post" id="contact-us-form">
 				  <div class="form-group">
 				    <label for="name">Name</label>
 				    <input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -231,10 +231,8 @@
 				    <label for="message">Message</label>
 				  	<textarea class="form-control" rows="3" id="message" name="message"></textarea>
 				  </div>
+				  <button type="submit" class="btn btn-default">Submit</button>
 				</form>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-primary">Submit</button>
 	      </div>
 	    </div>
 	  </div>
@@ -281,6 +279,41 @@
 			    }, 500);
 			    return false;
 			});
+
+			// contact us validation
+            $("#contact-us-form").validate({
+            	rules:{
+            		name: {
+            			required: true
+            		},
+            		email: {
+            			required: true,
+            			email: true
+            		},
+            		comment: {
+            			required: true
+            		},
+            		message: {
+            			required: true
+            		},
+            	},
+            	highlight: function(element) {
+		            $(element).closest('.form-group').addClass('has-error');
+		        },
+		        unhighlight: function(element) {
+		            $(element).closest('.form-group').removeClass('has-error');
+		        },
+		        errorElement: 'span',
+		        errorClass: 'help-block',
+		        errorPlacement: function(error, element) {
+		            if(element.parent('.input-group').length) {
+		                error.insertAfter(element.parent());
+		            } else {
+		                error.insertAfter(element);
+		            }
+		        }
+            });
+
 
 		});
 	</script>

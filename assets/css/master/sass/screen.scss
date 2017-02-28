@@ -488,7 +488,7 @@ footer{
 }
 
 .contact-us-modal{
-	.modal-footer{
+	form{
 		>button{
 			@include yellow-button(10px, 30px);
 			@include devil_hover($white, $button-yellow-darken);

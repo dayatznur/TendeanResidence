@@ -472,7 +472,7 @@ footer > .container > .social-media > li > a > img {
 }
 
 /* line 492, ../sass/screen.scss */
-.contact-us-modal .modal-footer > button {
+.contact-us-modal form > button {
   background-color: #fcc71d;
   border-radius: 25px;
   -moz-border-radius: 25px;
@@ -484,7 +484,7 @@ footer > .container > .social-media > li > a > img {
   font-size: 15px;
 }
 /* line 59, ../sass/screen.scss */
-.contact-us-modal .modal-footer > button:hover, .contact-us-modal .modal-footer > button:focus, .contact-us-modal .modal-footer > button:active {
+.contact-us-modal form > button:hover, .contact-us-modal form > button:focus, .contact-us-modal form > button:active {
   text-decoration: none;
   color: white;
   background-color: #fdd34f;
